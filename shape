@@ -1,0 +1,10 @@
+ /*Shape shape1=new Cycle();  //
+        Shape shape2=new Rect();
+        Shape shape3=new Flower();
+        shape1.drow();
+        shape2.drow();
+        shape3.drow();*/
+
+        /*Cycle cycle=new Cycle();
+        Rect rect=new Rect();
+        Flower flower=new Flower();
