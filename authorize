@@ -1,0 +1,8 @@
+see.BillingManager#authorize(BillingInfo, boolean[]) 
+   */ 
+  public BillingInfo authorize(BillingInfo inBillingInfo,  
+         boolean[] inNeedToAuthorizeBillingModel) 
+         throws BillingException 
+  { 
+    if (AUTHORIZE_RESPONSE == NULL) 
+      return null; 
