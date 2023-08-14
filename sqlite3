@@ -1,0 +1,13 @@
+import sqlite3
+ 
+conn = sqlite3.connect("data.db")
+cursor = conn.cursor()
+cursor.execute("CREATE TABLE items (title TEXT, price TEXT)")
+ 
+for item in items:
+    title = item.select(".title")[0].text
+    price = item.select(".price")[0].text
+    cursor.execute("INSERT INTO items VALUES (?, ?)", (title, price))
+ 
+conn.commit()
+conn.close()
