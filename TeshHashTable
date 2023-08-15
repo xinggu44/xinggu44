@@ -1,0 +1,30 @@
+bool insert(const pair<K, V>& kv)
+		{
+			if (_tables.size() == 0 || _n * 10 / _tables.size() >= 7)
+			{
+				size_t newsize = _tables.size() == 0 ? 10 : 2 * _tables.size();
+				HashTable<K, V> newtable;
+				newtable._tables.resize(newsize);
+				for (auto& e : _tables)
+				{
+					if (e._state == EXIST)
+					{
+						newtable.insert(e._kv);
+					}
+				}
+				_tables.swap(newtable._tables);
+			}
+			size_t hashi = kv.first % _tables.size();
+			size_t i = 1;
+			size_t index = hashi;
+			while (_tables[index]._state == EXIST)
+			{
+				index = hashi + i;
+				index %= _tables.size();
+				++i;
+			}
+			_tables[index]._kv = kv;
+			_tables[index]._state = EXIST;
+			++_n;
+			return true;
+		}
