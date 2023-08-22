@@ -1,0 +1,23 @@
+return [
+			{
+				label: 'MinoMino',
+				kind: CompletionItemKind.Text,
+				data: 3,
+				preselect: true,
+			},
+		];
+
+
+return [
+	{
+		label: 'MinoMino',
+		kind: CompletionItemKind.Text,
+		data: 3,
+		sortText: 'b'
+	},
+	{
+		label: 'MinoMin',
+		kind: CompletionItemKind.Text,
+		sortText: 'a'
+	}
+];
